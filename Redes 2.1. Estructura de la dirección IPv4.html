@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ips.gnomio.com/mod/page/view.php?id=1421 -->
+<html dir="ltr" lang="es" xml:lang="es" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ARL_5I22: 1. Estructura de la dirección IPv4</title>
+    <link rel="shortcut icon" href="https://ips.gnomio.com/theme/image.php/boost/theme/1653373288/favicon">
+    
+<meta name="keywords" content="moodle, ARL_5I22: 1. Estructura de la dirección IPv4">
+<link rel="stylesheet" type="text/css" href="./Redes 2.1. Estructura de la dirección IPv4_files/combo"><script src="./Redes 2.1. Estructura de la dirección IPv4_files/f.txt"></script><script src="./Redes 2.1. Estructura de la dirección IPv4_files/f(1).txt"></script><script src="./Redes 2.1. Estructura de la dirección IPv4_files/f(2).txt" id="google_shimpl"></script><script charset="utf-8" id="yui_3_17_2_1_1656765671805_8" src="./Redes 2.1. Estructura de la dirección IPv4_files/combo(1)" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./Redes 2.1. Estructura de la dirección IPv4_files/styles.php">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/ips.gnomio.com","sesskey":"Bc7eCkOJO3","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1653373288","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1651966029","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/C\u00f3rdoba","contextid":6720,"langrev":1654083605,"templaterev":"1651966029"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/ips.gnomio.com\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/ips.gnomio.com\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/ips.gnomio.com\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/ips.gnomio.com\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/ips.gnomio.com\/theme\/yui_combo.php?m\/1651966029\/","combine":true,"comboBase":"https:\/\/ips.gnomio.com\/theme\/yui_combo.php?","ext":false,"root":"m\/1651966029\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_stash-form":{"requires":["base","node","event","handlebars","moodle-core_availability-form"]},"moodle-availability_xp-form":{"requires":["base","node","event","handlebars","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-core-notification-confirm","moodle-block_xp-rulepicker"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_corrections-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-tinymce_mathslate-dialogue":{"requires":["escape","moodle-local_mathslate-editor","moodle-tinymce_mathslate-editor"]},"moodle-tinymce_mathslate-editor":{"requires":["dd-drag","dd-proxy","dd-drop","event","tabview","io-base","json","moodle-tinymce_mathslate-textool","moodle-tinymce_mathslate-mathjaxeditor"]},"moodle-tinymce_mathslate-mathjaxeditor":{"requires":["moodle-tinymce_mathslate-snippeteditor","dd-drop"]},"moodle-tinymce_mathslate-snippeteditor":{"requires":["json"]},"moodle-tinymce_mathslate-textool":{"requires":["dd-drag","dd-proxy","dd-drop","event","json"]}}},"gallery":{"name":"gallery","base":"https:\/\/ips.gnomio.com\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/ips.gnomio.com\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1651966029\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/ips.gnomio.com\/lib\/javascript.php\/1651966029\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/ips.gnomio.com\/lib\/javascript.php\/1651966029\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    config: ["Accessible.js", "Safe.js"],
+    errorSettings: { message: ["!"] },
+    skipStartupTypeset: true,
+    messageStyle: "none"
+});
+</script><link rel="preload" href="./Redes 2.1. Estructura de la dirección IPv4_files/f(3).txt" as="script"><script type="text/javascript" src="./Redes 2.1. Estructura de la dirección IPv4_files/f(3).txt"></script><link rel="preload" href="./Redes 2.1. Estructura de la dirección IPv4_files/f(4).txt" as="script"><script type="text/javascript" src="./Redes 2.1. Estructura de la dirección IPv4_files/f(4).txt"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./Redes 2.1. Estructura de la dirección IPv4_files/requirejs.php"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./Redes 2.1. Estructura de la dirección IPv4_files/javascript.php"></script></head>
+<body id="page-mod-page-view" class="format-topics  path-mod path-mod-page chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam ips-gnomio-com pagelayout-incourse course-23 context-6720 cmid-1421 category-4  jsenabled" style="padding: 0px 0px 154px;">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div id="page-wrapper" class="d-print-block" style="height: auto !important;">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="https://ips.gnomio.com/mod/page/view.php?id=1421#maincontent">Salta al contenido principal</a>
+</div><script src="./Redes 2.1. Estructura de la dirección IPv4_files/javascript(1).php"></script>
+<script src="./Redes 2.1. Estructura de la dirección IPv4_files/javascript(2).php"></script>
+<script src="./Redes 2.1. Estructura de la dirección IPv4_files/combo(2)"></script><script src="./Redes 2.1. Estructura de la dirección IPv4_files/javascript(3).php"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<br><br><br>
+<div style="width: 100%; text-align:center; padding:0px; margin:0px;">
+<script async="" src="./Redes 2.1. Estructura de la dirección IPv4_files/f(5).txt"></script>
+<!-- global_adaptable_arriba -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-8055926796644571" data-ad-slot="7194868565" data-ad-format="auto" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 280px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:1200px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1200" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Redes 2.1. Estructura de la dirección IPv4_files/ads.html" data-google-container-id="a!1" data-google-query-id="CPnytoud2vgCFUkouQYd1KUKmQ" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="width: 100%; text-align:center; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; padding:5px; margin:5px;">
+Remove advertising on this site for only
+<a href="https://www.gnomio.com/paddle/ns.php?p=746733&amp;s=ips.gnomio.com&amp;l=en" id="buygnomiomonth">$19.95 USD per month</a> or <a href="https://www.gnomio.com/paddle/ns.php?p=776838&amp;s=ips.gnomio.com&amp;l=en" id="buygnomioyear">$219.95 USD per year</a> (plus local taxes).
+<script type="text/javascript">
+    var gnomiobaseurl='https://www.gnomio.com/paddle/ns.php';
+    var gnomiolang='en';
+    var gnomiosite=window.location.hostname;
+
+    var gnomioproduct=746733;
+    document.getElementById('buygnomiomonth').href=gnomiobaseurl+'?p='+gnomioproduct+'&s='+gnomiosite+'&l='+gnomiolang;
+
+    var gnomioproduct=776838;
+    document.getElementById('buygnomioyear').href=gnomiobaseurl+'?p='+gnomioproduct+'&s='+gnomiosite+'&l='+gnomiolang;
+</script>
+</div>
+
+
+
+
+    <nav class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex" aria-label="Navegación del sitio">
+    
+            <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-light bg-gray" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="icon fa fa-bars fa-fw " aria-hidden="true"></i><span class="sr-only">Panel lateral</span></button>
+            </div>
+    
+            <a href="https://ips.gnomio.com/" class="navbar-brand aabtn 
+                    d-none d-sm-inline
+                    ">
+                <span class="site-name d-none d-md-inline">Moodle</span>
+            </a>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-62c03ce8979df62c03ce8961234" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" title="Idioma" aria-controls="drop-down-menu-62c03ce8979df62c03ce8961234">
+        Español - Internacional ‎(es)‎
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-62c03ce8979df62c03ce8961234" aria-labelledby="drop-down-62c03ce8979df62c03ce8961234">
+                <a class="dropdown-item" role="menuitem" href="https://ips.gnomio.com/mod/page/view.php?id=1421&amp;lang=en" title="English ‎(en)‎">English ‎(en)‎</a>
+                <a class="dropdown-item" role="menuitem" href="https://ips.gnomio.com/mod/page/view.php?id=1421&amp;lang=es" title="Español - Internacional ‎(es)‎">Español - Internacional ‎(es)‎</a>
+    </div>
+</li>
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <div class="ml-auto">
+                
+            </div>
+            <ul class="nav navbar-nav usernav">
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                    <div class="popover-region collapsed popover-region-notifications" id="nav-notification-popover-container" data-userid="413" data-region="popover-region">
+    <div class="popover-region-toggle nav-link icon-no-margin" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-62c03ce89875362c03ce8961235" aria-haspopup="true" aria-label="Mostrar la ventana de notificaciones cuando no hay ninguna" tabindex="0">
+                <i class="icon fa fa-bell fa-fw " title="Mostrar/ocultar menú de notificaciones" role="img" aria-label="Mostrar/ocultar menú de notificaciones"></i>
+        <div class="count-container hidden" data-region="count-container" aria-label="Hay 0 notificaciones sin leer">0</div>
+
+    </div>
+    <div id="popover-region-container-62c03ce89875362c03ce8961235" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Ventana de notificación" role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notificaciones</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" title="Marcar como leído" data-action="mark-all-read" role="button" aria-label="Marcar como leído">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+        </a>
+            <a href="https://ips.gnomio.com/message/notificationpreferences.php" title="Preferencias de notificación" aria-label="Preferencias de notificación">
+                <i class="icon fa fa-cog fa-fw " aria-hidden="true"></i></a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications" data-region="all-notifications" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">No tienes notificaciones</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link" href="https://ips.gnomio.com/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Ver todo</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed" data-region="popover-region-messages">
+    <a id="message-drawer-toggle-62c03ce8995cf62c03ce8961236" class="nav-link d-inline-block popover-region-toggle position-relative icon-no-margin" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" role="button">
+        <i class="icon fa fa-comment fa-fw " title="Mostrar/ocultar cajón de mensajería" role="img" aria-label="Mostrar/ocultar cajón de mensajería"></i>
+        <div class="count-container hidden" data-region="count-container" aria-label="Hay 0 conversaciones sin leer">0</div>
+    </a>
+    <span class="sr-only sr-only-focusable" data-region="jumpto" tabindex="-1"></span></div>
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item align-items-center pl-2">
+                    <div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-1-menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="https://ips.gnomio.com/mod/page/view.php?id=1421#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-1" aria-label="Menú de usuario" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-1-menu">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">Agustin Jaffre</span><span class="avatars"><span class="avatar current"><img src="./Redes 2.1. Estructura de la dirección IPv4_files/f2.jpg" class="userpicture" width="35" height="35" alt=""></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+                                                                <a href="https://ips.gnomio.com/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" tabindex="-1" aria-labelledby="actionmenuaction-1">
+                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-1">Área personal</span>
+                        </a>
+                    <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                                                <a href="https://ips.gnomio.com/user/profile.php?id=413" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" tabindex="-1" aria-labelledby="actionmenuaction-2">
+                                <i class="icon fa fa-user fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-2">Perfil</span>
+                        </a>
+                                                                <a href="https://ips.gnomio.com/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" tabindex="-1" aria-labelledby="actionmenuaction-3">
+                                <i class="icon fa fa-table fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-3">Calificaciones</span>
+                        </a>
+                                                                <a href="https://ips.gnomio.com/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" tabindex="-1" aria-labelledby="actionmenuaction-4">
+                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-4">Mensajes</span>
+                        </a>
+                                                                <a href="https://ips.gnomio.com/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" tabindex="-1" aria-labelledby="actionmenuaction-5">
+                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-5">Preferencias</span>
+                        </a>
+                    <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                                                <a href="https://ips.gnomio.com/login/logout.php?sesskey=Bc7eCkOJO3" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" tabindex="-1" aria-labelledby="actionmenuaction-6">
+                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-6">Cerrar sesión</span>
+                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    <div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+        <nav class="list-group" aria-label="ARL_5I22">
+            <ul>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">ARL_5I22</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/user/index.php?id=23" data-key="participants" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="90" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-users fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Participantes</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/admin/tool/lp/coursecompetencies.php?courseid=23" data-key="competencies" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-check-square-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Competencias</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/grade/report/index.php?id=23" data-key="grades" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-table fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Calificaciones</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23#section-0" data-key="141" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Presentación de la asignatura</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23#section-1" data-key="142" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Introducción a las redes de computadoras</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action active " href="https://ips.gnomio.com/course/view.php?id=23#section-2" data-key="144" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body font-weight-bold">Direccionamiento IP</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23#section-3" data-key="146" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">La capa de red</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23#section-4" data-key="147" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Gestión de redes de computadoras</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23#section-5" data-key="143" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="23">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">La capa de enlace</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    </ul>
+                    </nav>
+                    <nav class="list-group mt-1" aria-label="Sitio">
+                    <ul>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/my/" data-key="myhome" data-isexpandable="0" data-indent="0" data-showdivider="1" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Área personal</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/?redirect=0" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="myhome">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-home fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Inicio del sitio</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/calendar/view.php?view=month&amp;course=23" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-calendar fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Calendario</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/user/files.php" data-key="privatefiles" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-file-o fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">Archivos privados</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="list-group-item " data-key="mycourses" data-isexpandable="1" data-indent="0" data-showdivider="0" data-type="0" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="myhome">
+                            <div class="ml-0">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body">Mis cursos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action  " href="https://ips.gnomio.com/course/view.php?id=23" data-key="23" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                            <div class="ml-1">
+                                <div class="media">
+                                        <span class="media-left">
+                                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                    <span class="media-body ">ARL_5I22</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page" class="container-fluid d-print-block">
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card ">
+            <div class="card-body ">
+                <div class="d-sm-flex align-items-center">
+                    <div class="mr-auto">
+                        <div class="page-context-header"><div class="page-header-headings"><h1>Administración de Redes Locales 2022</h1></div></div>
+                    </div>
+
+                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav aria-label="Barra de navegación">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://ips.gnomio.com/my/">Área personal</a>
+                </li>
+        
+                <li class="breadcrumb-item">Mis cursos</li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://ips.gnomio.com/course/view.php?id=23" title="Administración de Redes Locales 2022">ARL_5I22</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://ips.gnomio.com/course/view.php?id=23#section-2">Direccionamiento IP</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://ips.gnomio.com/mod/page/view.php?id=1421" aria-current="page" title="Página">1. Estructura de la dirección IPv4</a>
+                </li>
+        </ol>
+</nav>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row pb-3 d-print-block">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" aria-label="Contenido">
+
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span><h2>1. Estructura de la dirección IPv4</h2><div class="box py-3 generalbox center clearfix"><div class="no-overflow"><p>Se explica en que consiste una dirección IP y como debe interpretarse. (10 minutos de lectura sugerida)</p>
+
+<h4>Tabla de contenidos</h4>
+
+<ol>
+    <li>Direcciones binarias e IPv4</li>
+    <!--https://ccnadesdecero.es/sistema-numeracion-binaria/-->
+    <li>Estructura de direcciones IPv4</li>
+    <!--https://ccnadesdecero.es/redes-direccionamiento-ipv4/-->
+    <li>Máscara de subred</li>
+    <li>Longitud del prefijo</li>
+    <li>Direcciones de red, host y broadcast</li>
+</ol>
+
+<h3>1. Direcciones binarias e IPv4</h3>
+
+
+<p>Las direcciones IPv4 son una serie de 1s y 0s. Es importante que comprendamos el sistema de numeración binario porque los hosts, servidores y dispositivos de red usan direccionamiento binario. El binario es un sistema de numeración que consta de los dígitos
+    0 y 1 llamados bits. En contraste, el sistema de numeración decimal consta de 10 dígitos que consisten en los dígitos desde el 0 al 9.<br></p>
+<p>Estas direcciones binarias son difíciles de administrar, por lo que los administradores de red utilizan una notación especial en donde estos números binarios se convierten al decimal. En este punto trataremos algunas formas de hacerlo. Específicamente,
+    los dispositivos usan direcciones binarias IPv4, como se muestra en la imagen, para identificarse entre sí.</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1a-Direcciones-binarias-e-IPv4.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="330"></p>
+
+<p>Cada dirección consta de una cadena de 32 bits, dividida en cuatro secciones llamadas <strong>octetos</strong>. Cada octeto contiene 8 bits (o 1 byte) separados con un punto. Por ejemplo, a la PC1 en la figura se le asigna la dirección IPv4 <strong>11000000.10101000.00001010.00001010</strong>.
+    Su dirección de puerta de enlace predeterminada sería la de la interfaz R1 Gigabit Ethernet <strong>11000000.10101000.00001010.00000001</strong>.</p>
+
+<p>Para facilitar el uso por parte de las personas, las direcciones IPv4 se expresan comúnmente en notación decimal con puntos (<a href="https://en.wikipedia.org/wiki/Dot-decimal_notation"><em>quad-dotted notation</em></a>). A la PC1 se le asigna la dirección
+    IPv4 192.168.10.10, y su dirección de puerta de enlace predeterminada es 192.168.10.1, como se muestra en la imagen.</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1b-Direcciones-decimales-en-IPv4.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="331"></p>
+
+<p>Aprender a convertir binario a decimal requiere una comprensión de la notación posicional. La notación posicional significa que un dígito representa diferentes valores dependiendo de la «posición» que ocupa el dígito en la secuencia de números. En el
+    sistema de numeración decimal (<strong>base 10</strong>) el valor posicional o peso del número dentro de la cifra varía dependiendo de su posición, como se describe en la siguiente tabla:</p>
+
+<table>
+    <thead>
+        <tr align="right">
+            <th>Posición</th>
+            <th>3</th>
+            <th>2</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cálculo</td>
+            <td>(10<sup>3</sup>)</td>
+            <td>(10<sup>2</sup>)</td>
+            <td>(10<sup>1</sup>)</td>
+            <td>(10<sup>0</sup>)</td>
+        </tr>
+        <tr align="right">
+            <td align="left">Peso</td>
+            <td>1000</td>
+            <td>100</td>
+            <td>10</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<ul>
+    <li><strong>Posición:</strong> considera la posición del número decimal dentro de la cifra de derecha a izquierda, 0 (primera posición), 1 (segunda posición), 2 (tercera posición), 3 (cuarta posición). Estos números también representan el valor exponencial
+        utilizado para calcular el valor posicional o peso en la última fila.</li>
+    <li><strong>Cálculo del peso o v</strong><strong>alor posicional:</strong> se obtiene tomando la base del sistema, en este caso 10 y elevándola por el valor de la posición indicada en la fila anterior.</li>
+    <li><strong>V</strong><strong>alor posiciona o peso:</strong> obtenido en la última representa unidades de miles, centenas, decenas o solamente unidades para la primera posición.</li>
+</ul>
+<p>Para usar el sistema posicional, solo se debe hacer coincidir un número dado con su valor posicional. El ejemplo en la tabla ilustra cómo se usa la notación posicional con el número decimal 1234.</p>
+<div id="ccnad-56ced1ea4caa5c180904e01b8b718acf"></div>
+<table>
+    <thead>
+        <tr>
+            <th>BASE</th>
+            <th>Miles</th>
+            <th>Centenas</th>
+            <th>Decenas</th>
+            <th>Unidades</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Valor posicional</td>
+            <td>1000</td>
+            <td>100</td>
+            <td>10</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Número decimal (1234)</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Cálculo</td>
+            <td>1 x 1000</td>
+            <td>2 x 100</td>
+            <td>3 x 10</td>
+            <td>4 x 1</td>
+        </tr>
+        <tr>
+            <td>Súmalos …</td>
+            <td>1000</td>
+            <td>+ 200</td>
+            <td>+ 30</td>
+            <td>+ 4</td>
+        </tr>
+        <tr>
+            <td><strong>Resultado</strong></td>
+            <td colspan="4"><strong>1234</strong></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>En contraste, la notación posicional binaria opera como se describe en la tabla.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Posición</th>
+            <th>2</th>
+            <th>2</th>
+            <th>2</th>
+            <th>2</th>
+            <th>2</th>
+            <th>2</th>
+            <th>2</th>
+            <th>2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cálculo</td>
+            <td>(2<sup>7</sup>)</td>
+            <td>(2<sup>6</sup>)</td>
+            <td>(2<sup>5</sup>)</td>
+            <td>(2<sup>4</sup>)</td>
+            <td>(2<sup>3</sup>)</td>
+            <td>(2<sup>2</sup>)</td>
+            <td>(2<sup>1</sup>)</td>
+            <td>(2<sup>0</sup>)</td>
+        </tr>
+        <tr>
+            <td>Valor de la posición</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>El ejemplo en la tabla ilustra cómo un número binario <strong>11000000</strong> corresponde al número <strong>192</strong>.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor posicional</th>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Número binario (11000000)</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Calcular</td>
+            <td>1 x 128</td>
+            <td>1 x 64</td>
+            <td>0 x 32</td>
+            <td>0 x 16</td>
+            <td>0 x 8</td>
+            <td>0 x 4</td>
+            <td>0 x 2</td>
+            <td>0 x 1</td>
+        </tr>
+        <tr>
+            <td>Añádelos ..</td>
+            <td>128</td>
+            <td>+ 64</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+        </tr>
+        <tr>
+            <td><strong>Resultado</strong></td>
+            <td colspan="8"><strong>192</strong></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>Si el número binario hubiera sido <strong>10101000</strong>, entonces el número decimal correspondiente sería 168.</p>
+
+<p>Para convertir una dirección IPv4 binaria a su equivalente decimal punteado, divide la dirección IPv4 en cuatro octetos de 8 bits. A continuación, aplica el valor posicional binario al primer número binario del octeto y calcula en consecuencia.</p>
+
+<p>Por ejemplo, considera que <strong>11000000.10101000.00001011.00001010</strong> es la dirección binaria IPv4 de un host. Para convertir la dirección binaria a decimal, comienza con el primer octeto, como se muestra en la tabla. Ingresa el número binario
+    de 8 bits bajo el valor posicional de la fila 1 y luego calcula para producir el número decimal 192. Este número va al primer octeto de la notación decimal con puntos.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor posicional</th>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Número binario (11000000)</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Calcular</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Añádelos …</td>
+            <td>128</td>
+            <td>+ 64</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+        </tr>
+        <tr>
+            <td><strong>Resultado</strong></td>
+            <td colspan="8"><strong>192</strong></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>Luego convierte el segundo octeto de 10101000 como se muestra en la tabla. El valor decimal resultante es 168, y va al segundo octeto.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor posicional</th>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Número binario (10101000)</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Calcular</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Añádelos …</td>
+            <td>128</td>
+            <td>+ 0</td>
+            <td>+ 32</td>
+            <td>+ 0</td>
+            <td>+ 8</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+        </tr>
+        <tr>
+            <td><strong>Resultado</strong></td>
+            <td colspan="8"><strong>168</strong></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>Convierte el tercer octeto de 00001011 como se muestra en la tabla.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor posicional</th>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Número binario (00001011)</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Calcular</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Añádelos …</td>
+            <td>0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 8</td>
+            <td>+ 0</td>
+            <td>+ 2</td>
+            <td>+ 1</td>
+        </tr>
+        <tr>
+            <td><strong>Resultado</strong></td>
+            <td colspan="8"><strong>11</strong></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>Convierte el cuarto octeto de 00001010 como se muestra en la tabla.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor posicional</th>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Número binario (00001010)</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Calcular</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Añádelos …</td>
+            <td>0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 0</td>
+            <td>+ 8</td>
+            <td>+ 0</td>
+            <td>+ 2</td>
+            <td>+ 0</td>
+        </tr>
+        <tr>
+            <td><strong>Resultado</strong></td>
+            <td colspan="8"><strong>10</strong></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>Esto completa el proceso de traducción de la dirección IP binaria en decimal punteado produciendo el número 192.168.11.10 en la notación solicitada.</p>
+
+<p>Para realizar la conversión en el sentido inverso podemos usar la tabla de valores posicionales binarios y aplicar el siguiente algoritmo como muestra la figura:</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1c-Conversión-Decimal-a-Binaria-128.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+
+<p>¿Es el número decimal del octeto (n) igual o mayor que el bit más significativo (<strong>128</strong>)?</p>
+<ul>
+    <li>Si no, entonces introduce el <strong>0</strong> binario en el valor <strong>128</strong> posicional.</li>
+    <li>Si es así, entonces agrega un <strong>1</strong> binario en el valor posicional de <strong>128</strong> y resta <strong>128</strong> del número decimal.</li>
+</ul>
+
+<p>Repite el paso anterior hasta llegar a la primera posición exactamente en ese orden de mayor peso binario al menor.</p>
+
+<p>Para ayudar a comprender el proceso, considera la dirección IP 192.168.11.10.</p>
+
+<p>El primer octeto número 192 se convierte en binario utilizando el proceso de notación posicional explicado anteriormente.</p>
+
+<p>Es posible evitar el proceso de resta con números decimales más fáciles o más pequeños. Por ejemplo, observa que es bastante fácil calcular el tercer octeto convertido a un número binario sin pasar realmente por el proceso de resta (8 + 2 = 10). El valor
+    binario del tercer octeto es 00001010.</p>
+
+<p>El cuarto octeto es 11 (8 + 2 + 1). El valor binario del cuarto octeto es 00001011.</p>
+
+<p>Haz clic en cada paso para ver la conversión de la dirección IP de 192.168.10.11 en binario.</p>
+
+<div class="tabs">
+    <span data-tab-value="#tab01">Paso 1</span>
+    <span data-tab-value="#tab02">Paso 2</span>
+    <span data-tab-value="#tab03">Paso 3</span>
+    <span data-tab-value="#tab04">Paso 4</span>
+    <span data-tab-value="#tab05">Paso 5</span>
+    <span data-tab-value="#tab06">Paso 6</span>
+    <span data-tab-value="#tab07">Paso 7</span>
+    <span data-tab-value="#tab08">Paso 8</span>
+    <span data-tab-value="#tab09">Paso 9</span>
+    <span data-tab-value="#tab10">Paso 10</span>
+    <span data-tab-value="#tab11">Paso 11</span>
+</div>
+
+<div class="tabs__tab active" id="tab01" data-tab-info="">
+
+    <p>¿El primer octeto número 192 es igual o mayor que el bit 128 de alto orden?</p>
+    <ul>
+        <li>Sí, lo es, por lo tanto agrega un 1 al valor posicional de alto orden para representar 128.</li>
+        <li>Resta 128 de 192 para producir un resto de 64.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d01-Decimal-a-Binario-Paso-1.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab02" data-tab-info="">
+    <p>¿El resto 64 es igual o mayor que el siguiente bit de orden alto 64?</p>
+    <ul>
+        <li>Es igual, por lo tanto, agrega un 1 al siguiente valor posicional de alto orden.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d02-Decimal-a-Binario-Paso-2.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab03" data-tab-info="">
+    <p>Dado que no hay resto, introduce binario <strong>0</strong>&nbsp;en los valores posicionales restantes.</p>
+    <ul>
+        <li>El valor binario del primero octeto es&nbsp;<strong>11000000</strong>.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d03-Decimal-a-Binario-Paso-3.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab04" data-tab-info="">
+    <p>¿El segundo octeto número <strong>168</strong>&nbsp;igual o mayor que el bit de orden alto&nbsp;<strong>128</strong>?</p>
+    <ul>
+        <li>Si, esto es cierto, por lo tanto agrega un <strong>1</strong>&nbsp;al valor posicional de alto orden para representar&nbsp;<strong>128</strong>.</li>
+        <li>Resta <strong>128</strong>&nbsp;de&nbsp;<strong>168</strong>&nbsp;para producir un resto de&nbsp;<strong>40</strong>.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d04-Decimal-a-Binario-Paso-4.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab05" data-tab-info="">
+    <p>¿El resto es&nbsp;<strong>40</strong>&nbsp;igual o mayor que el siguiente bit de orden alto&nbsp;<strong>64</strong>?</p>
+    <ul>
+        <li>No, no lo es, por lo tanto, ingresa un <strong>0</strong>&nbsp;binario en el valor posicional 64.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d05-Decimal-a-Binario-Paso-5.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab06" data-tab-info="">
+    <p>¿El resto es <strong>40</strong> igual o mayor que el siguiente bit de orden alto <strong>32</strong>?</p>
+    <ul>
+        <li>Si, esto es cierto, por lo tanto agrega un <strong>1</strong> al valor posicional de alto orden para representar <strong>32</strong>.</li>
+        <li>Resta <strong>32</strong> de 40 para producir un resto de <strong>8</strong>.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d06-Decimal-a-Binario-Paso-6.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab07" data-tab-info="">
+    <p>¿El resto <strong>8</strong> es igual o mayor que el siguiente bit de orden alto <strong>16</strong>?</p>
+    <ul>
+        <li>No, no lo es, por lo tanto, introduce un 0 binario en el valor posicional.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d07-Decimal-a-Binario-Paso-7.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab08" data-tab-info="">
+    <p>¿El resto <strong>8</strong> es igual o mayor que el siguiente bit de orden alto <strong>8</strong>?</p>
+    <ul>
+        <li>Si, esto es cierto, por lo tanto agrega un <strong>1</strong>.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d08-Decimal-a-Binario-Paso-8.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab09" data-tab-info="">
+    <p>Dado que no hay resto, introduce el binario <strong>0</strong>&nbsp;en los valores posicionales restantes.</p>
+    <ul>
+        <li>El valor binario del segundo octeto es&nbsp;<strong>10101000</strong>.</li>
+    </ul>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d09-Decimal-a-Binario-Paso-9.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab10" data-tab-info="">
+    <p>El valor binario del tercer octeto es <strong>00001010</strong>.</p>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d10-Decimal-a-Binario-Paso-10.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+<div class="tabs__tab" id="tab11" data-tab-info="">
+    <p>El valor binario del cuarto octeto es <strong>00001011.</strong></p>
+    <p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-1d11-Decimal-a-Binario-Paso-11.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="372"></p>
+</div>
+
+<p>La conversión entre binario y decimal puede parecer difícil al principio, pero con la práctica debería ser más fácil con el tiempo.</p>
+
+<h3>2. Estructura de direcciones IPv4</h3>
+
+<p>Una dirección IPv4 es una dirección jerárquica de 32 bits que se compone de una porción de red y una porción de host. Al determinar la porción de red frente a la porción de host, debes mirar la secuencia de 32 bits, como se muestra en la imagen.</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-2-Porción-de-red-y-host-IPv4.png" alt="" role="presentation" style="outline: black solid 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="325"></p>
+
+<p>Los bits dentro de la porción de red de la dirección deben ser idénticos para todos los dispositivos que residen en la misma red. Los bits dentro de la porción de host de la dirección deben ser únicos para identificar un host específico dentro de una
+    red. Si dos hosts tienen el mismo patrón de bits en la porción de red especificada de la secuencia de 32 bits, esos dos hosts residirán en la misma red.</p>
+
+<p>Pero, ¿cómo saben los hosts qué porción de los 32 bits identifica la red y cuál identifica al host? Esa es la función de la máscara de subred.</p>
+
+<h3>3. Máscara de subred</h3>
+
+<p>Como se muestra en la imagen, la asignación de una dirección IPv4 a un host requiere lo siguiente:</p>
+
+<ul>
+    <li><strong>Dirección IPv4</strong>: esta es la dirección IPv4 única del host.</li>
+    <li><strong>Máscara de subred</strong>: se usa para identificar la porción de red / host de la dirección IPv4.</li>
+</ul>
+
+<p>Configuración de IPv4 en una computadora con Windows:</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-3a-Ejemplo-Dirección-IP-en-PC.png" alt="" role="presentation" style="outline: black solid 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="500"></p>
+
+<p style="background: #d0e6f0;color: #7190a2;"><strong>Nota</strong>: Se requiere una dirección IPv4 de puerta de enlace predeterminada para llegar a redes remotas y se requieren direcciones IPv4 del servidor DNS para traducir los nombres de dominio a direcciones IPv4.</p>
+
+
+<p>La máscara de subred IPv4 se usa para diferenciar la porción de red de la porción de host de una dirección IPv4. Cuando se asigna una dirección IPv4 a un dispositivo, la máscara de subred se usa para determinar la dirección de red del dispositivo. La
+    dirección de red representa todos los dispositivos en la misma red.</p>
+<p>La siguiente imagen muestra la máscara de subred de 32 bits en formato decimal y binario.</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-3b-Máscara-de-subred.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="593" height="288"></p>
+
+<p>Observa cómo la máscara de subred es una secuencia consecutiva de 1 bits seguida de una secuencia consecutiva de 0 bits.</p>
+<p>Para identificar las porciones de red y host de una dirección IPv4, la máscara de subred se compara con la dirección IPv4 bit por bit, de izquierda a derecha como se muestra en la imagen.</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-3c-Asociar-IPv4-con-máscara-de-subred.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="352"></p>
+
+<p>Tenga en cuenta que la máscara de subred en realidad no contiene la porción de red o host de una dirección IPv4, solo le dice a la computadora dónde buscar la parte de la dirección IPv4 que es la porción de red y qué parte es la porción de host.</p>
+
+<p>El proceso real utilizado para identificar la porción de red y la porción de host se llama AND lógico (<em>ANDing</em><strong>)</strong>.</p>
+
+<h3>4. Longitud del prefijo</h3>
+
+<p>Expresar direcciones de red y direcciones de host con la dirección de máscara de subred decimal con puntos puede volverse engorroso. Afortunadamente, hay un método alternativo para identificar una máscara de subred, un método llamado <strong>longitud del prefijo</strong>.</p>
+
+<p>La longitud del prefijo es el número de bits establecido en 1 en la máscara de subred. Está escrito en «notación de barra», que se observa mediante una barra diagonal (/) seguida del número de bits establecido en 1. Por lo tanto, cuenta el número de bits
+    en la máscara de subred y añádelo con una barra.</p>
+<p>Consulta la tabla para ver ejemplos. La primera columna enumera varias máscaras de subred que se pueden usar con una dirección de host. La segunda columna muestra la dirección binaria convertida de 32 bits. La última columna muestra la longitud del prefijo
+    resultante.
+</p>
+
+<p><strong>Comparación de la máscara de subred y la longitud del prefijo</strong></p>
+
+<table>
+    <thead>
+        <tr>
+            <th><strong>Máscara Subred</strong></th>
+            <th><strong>Dirección 32-bit</strong></th>
+            <th><strong>Longitud Prefijo</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>255.0.0.0</td>
+            <td>
+                11111111.00000000.00000000.00000000
+            </td>
+            <td>/8</td>
+        </tr>
+        <tr>
+            <td>255.255.0.0</td>
+            <td>
+                11111111.11111111.00000000.00000000
+            </td>
+            <td>/16</td>
+        </tr>
+        <tr>
+            <td>255.255.255.0</td>
+            <td>
+                11111111.11111111.11111111.00000000
+            </td>
+            <td>/24</td>
+        </tr>
+        <tr>
+            <td>255.255.255.128</td>
+            <td>
+                11111111.11111111.11111111.10000000
+            </td>
+            <td>/25</td>
+        </tr>
+        <tr>
+            <td>255.255.255.192</td>
+            <td>
+                11111111.11111111.11111111.11000000
+            </td>
+            <td>/26</td>
+        </tr>
+        <tr>
+            <td>255.255.255.224</td>
+            <td>
+                11111111.11111111.11111111.11100000
+            </td>
+            <td>/27</td>
+        </tr>
+        <tr>
+            <td>255.255.255.240</td>
+            <td>
+                11111111.11111111.11111111.11110000
+            </td>
+            <td>/28</td>
+        </tr>
+        <tr>
+            <td>255.255.255.248</td>
+            <td>
+                11111111.11111111.11111111.11111000
+            </td>
+            <td>/29</td>
+        </tr>
+        <tr>
+            <td>255.255.255.252</td>
+            <td>
+                11111111.11111111.11111111.11111100
+            </td>
+            <td>/30</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p style="background: #d0e6f0;color: #7190a2;"><strong>Nota</strong>: Una dirección de red también se conoce como prefijo o prefijo de red. Por lo tanto, la longitud del prefijo es el número de 1 bits en la máscara de subred.</p>
+
+
+<p>Al representar una dirección IPv4 utilizando una longitud de prefijo, la dirección IPv4 se escribe seguida de la longitud del prefijo sin espacios. Por ejemplo, 192.168.10.10 255.255.255.0 se escribiría como <strong>192.168.10.10/24</strong>. El uso de
+    varios tipos de longitudes de prefijo se discutirá más adelante. Por ahora, el foco estará en el prefijo <strong>/24</strong> (es decir, 255.255.255.0).</p>
+
+<p>Un AND lógico es una de las tres operaciones booleanas utilizadas en la lógica booleana o digital. Los otros dos son OR y NOT. La operación AND se usa para determinar la dirección de red.</p>
+
+<p>Y lógico es la comparación de dos bits que producen los resultados que se muestran a continuación. Tenga en cuenta que solo un 1 Y 1 produce un 1. Cualquier otra combinación da como resultado un 0.</p>
+
+<ul>
+    <li>1 AND 1 = 1</li>
+    <li>0 AND 1 = 0</li>
+    <li>1 AND 0 = 0</li>
+    <li>0 AND 0 = 0</li>
+</ul>
+
+<p style="background: #d0e6f0;color: #7190a2;"><strong>Nota</strong>: En lógica digital, 1 representa <em>Verdadero</em> y 0 representa <em>Falso</em>. Cuando se usa una operación AND, ambos valores de entrada deben ser <em>Verdaderos</em> (1) para que el resultado sea <em>Verdadero</em> (1).</p>
+
+
+<p>Para identificar la dirección de red de un host IPv4, la dirección IPv4 se realiza AND lógicamente, poco a poco, con la máscara de subred. ANDing entre la dirección y la máscara de subred produce la dirección de red.</p>
+
+<p>Para ilustrar cómo se usa AND para descubrir una dirección de red, considera un host con dirección IPv4 192.168.10.10 y una máscara de subred de 255.255.255.0, como se muestra en la imagen:</p>
+
+<ul>
+    <li><strong>Dirección de host IPv4 (192.168.10.10)</strong>: la dirección IPv4 del host en formato decimal y binario con puntos.</li>
+    <li><strong>Máscara de subred (255.255.255.0)</strong>: la máscara de subred del host en formato decimal y binario con puntos.</li>
+    <li><strong>Dirección de red (192.168.10.0)</strong>: la operación AND lógica entre la dirección IPv4 y la máscara de subred da como resultado una dirección de red IPv4 que se muestra en formato decimal y binario con puntos.</li>
+</ul>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-4-AND-lógico-para-dirección-de-red.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" title="" width="600" height="339"></p>
+
+<p>Usando la primera secuencia de bits como ejemplo, observe que la operación AND se realiza en el 1 bit de la dirección del host con el 1 bit de la máscara de subred. Esto da como resultado 1 bit para la dirección de red. <strong>1 AND 1 = 1</strong>.</p>
+
+<p>La operación AND entre una dirección de host IPv4 y una máscara de subred da como resultado la dirección de red IPv4 para este host. En este ejemplo, la operación AND entre la dirección de host 192.168.10.10 y la máscara de subred 255.255.255.0 (/ 24)
+    da como resultado la dirección de red IPv4 de 192.168.10.0/24. Esta es una operación IPv4 importante, ya que le dice al host a qué red pertenece.</p>
+
+<h3>5. Direcciones de red, host y broadcast</h3>
+
+
+<p>Dentro de cada red hay tres tipos de direcciones IP:</p>
+
+<ul>
+    <li>Dirección de red</li>
+    <li>Direcciones de host</li>
+    <li>Dirección de Difusión (Broadcast)</li>
+</ul>
+
+<p>Usando la topología en la imagen, se examinarán estos tres tipos de direcciones.</p>
+
+<p><img src="./Redes 2.1. Estructura de la dirección IPv4_files/2.1-5-Tipos-de-direcciones-IP.png" alt="" role="presentation" style="outline: red dashed 1px;" class="img-responsive atto_image_button_text-bottom" width="600" height="387"></p>
+
+<h4>5.1 Dirección de red</h4>
+
+<p>Una dirección de red es una dirección que representa una red específica. Un dispositivo pertenece a esta red si cumple tres criterios:</p>
+
+<ul>
+    <li>Tiene la misma máscara de subred que la dirección de red.</li>
+    <li>Tiene los mismos bits de red que la dirección de red, como lo indica la máscara de subred.</li>
+    <li>Se encuentra en el mismo dominio de difusión que otros hosts con la misma dirección de red.</li>
+</ul>
+
+<p>Un host determina su dirección de red realizando una operación AND entre su dirección IPv4 y su máscara de subred.</p>
+
+<p>Como se muestra en la tabla, la dirección de red tiene todos los 0 bits en la parte del host, según lo determinado por la máscara de subred. En este ejemplo, la dirección de red es 192.168.10.0/24. No se puede asignar una dirección de red a un dispositivo.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th><strong>Red, host y direcciones de difusión</strong></th>
+            <th><strong>Porción de Red</strong></th>
+            <th><strong>Porción de Host</strong></th>
+            <th><strong>Bits Host</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Máscara Subred <strong>255.255.255.0</strong> o <strong>/24</strong></td>
+            <td>
+                <pre>255      255       255
+11111111 11111111 11111111</pre>
+            </td>
+            <td>
+                <pre>0<br>00000000</pre>
+            </td>
+            <td>–</td>
+        </tr>
+        <tr>
+            <td>Dirección de Red <strong>192.168.10.0/24</strong></td>
+            <td>
+                <pre>192      168       10
+11000000 10100000 00001010</pre>
+            </td>
+            <td>
+                <pre>0
+00000000</pre>
+            </td>
+            <td>Todos 0s</td>
+        </tr>
+        <tr>
+            <td>Primera Dirección <strong>192.168.10.1/24</strong></td>
+            <td>
+                <pre>192      168       10
+11000000 10100000 00001010</pre>
+            </td>
+            <td>
+                <pre>1
+00000001</pre>
+            </td>
+            <td>Todos 0s y un 1</td>
+        </tr>
+        <tr>
+            <td>Última Dirección <strong>192.168.10.25/24</strong></td>
+            <td>
+                <pre>192      168       10
+11000000 10100000 00001010</pre>
+            </td>
+            <td>
+                <pre>254
+11111110</pre>
+            </td>
+            <td>Todos 1s y un 0</td>
+        </tr>
+        <tr>
+            <td>Dirección Broadcast <strong>192.168.10.255/24</strong></td>
+            <td>
+                <pre>192      168       10
+11000000 10100000 00001010</pre>
+            </td>
+            <td>
+                <pre>255
+11111111</pre>
+            </td>
+            <td>Todos 1s</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<h4>5.2 Direcciones de host</h4>
+
+<p>Las direcciones de host son direcciones que pueden asignarse a un dispositivo, como una computadora host, computadora portátil, teléfono inteligente, cámara web, impresora, Router, etc. La porción de host de la dirección son los bits indicados por 0 bits
+    en la máscara de subred. Las direcciones de host pueden tener cualquier combinación de bits en la porción de host, excepto todos los 0 bits (esto sería una dirección de red) o todos los 1 bits (sería una dirección de difusión).</p>
+
+<p>Todos los dispositivos dentro de la misma red deben tener la misma máscara de subred y los mismos bits de red. Solo los bits del host serán diferentes y deben ser únicos.</p>
+
+<p>Observe que en la tabla, hay una primera y última dirección de host:</p>
+
+<ul>
+    <li>Primera dirección de host : este primer host dentro de una red tiene todos los 0 bits con el último bit (el más a la derecha) como 1 bit. En este ejemplo es 192.168.10.1/24.</li>
+    <li>Última dirección de host: este último host dentro de una red tiene todos los 1 bits con el último bit (más a la derecha) como un bit 0. En este ejemplo es 192.168.10.254/24.</li>
+</ul>
+
+<p>Cualquier dirección entre 192.168.10.1/24 y 192.168.10.254/24, inclusive, se puede asignar a un dispositivo en la red.</p>
+
+<h4>5.3 Dirección de Difusión</h4>
+
+<p>Una dirección de difusión es una dirección que se utiliza cuando se requiere para llegar a todos los dispositivos en la red IPv4. Como se muestra en la tabla, la dirección de difusión de la red tiene todos los 1 bits en la parte del host, según lo determinado
+    por la máscara de subred. En este ejemplo, la dirección de broadcast es 192.168.10.255/24. No se puede asignar una dirección de difusión a un dispositivo.</p>
+
+<script type="text/javascript">
+    const tabs = document.querySelectorAll('[data-tab-value]')
+    const tabInfos = document.querySelectorAll('[data-tab-info]')
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = document
+                .querySelector(tab.dataset.tabValue);
+
+            tabInfos.forEach(tabInfo => {
+                tabInfo.classList.remove('active')
+            })
+            target.classList.add('active');
+        })
+    })
+</script></div></div><div class="modified">Última modificación: lunes, 21 de marzo de 2022, 05:48</div></div>
+                    <div class="mt-5 mb-1 activity-navigation container-fluid">
+<div class="row">
+    <div class="col-md-4">        <div class="float-left">
+                <a href="https://ips.gnomio.com/mod/page/view.php?id=1419&amp;forceview=1" id="prev-activity-link" class="btn btn-link">◄ 6. Acceso a los datos</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://ips.gnomio.com/course/jumpto.php" class="form-inline" id="url_select_f62c03ce89612315">
+        <input type="hidden" name="sesskey" value="Bc7eCkOJO3">
+            <label for="jump-to-activity" class="sr-only">
+                Ir a...
+            </label>
+        <select id="jump-to-activity" class="custom-select urlselect" name="jump">
+                    <option value="" selected="">Ir a...</option>
+                    <option value="/mod/forum/view.php?id=646&amp;forceview=1">Avisos de la asignatura</option>
+                    <option value="/mod/forum/view.php?id=647&amp;forceview=1">Foro para discusión de la asignatura por parte de los alumnos</option>
+                    <option value="/mod/url/view.php?id=912&amp;forceview=1">Redes de Computadoras 5ta edición de Andrew S. Tanenbaum</option>
+                    <option value="/mod/page/view.php?id=1409&amp;forceview=1">1. Conceptos básicos</option>
+                    <option value="/mod/page/view.php?id=1414&amp;forceview=1">2. Reglas y protocolos</option>
+                    <option value="/mod/page/view.php?id=1416&amp;forceview=1">3. Organizaciones de estándares</option>
+                    <option value="/mod/page/view.php?id=1417&amp;forceview=1">4. Modelos de referencia</option>
+                    <option value="/mod/page/view.php?id=1418&amp;forceview=1">5. Encapsulamiento</option>
+                    <option value="/mod/page/view.php?id=1419&amp;forceview=1">6. Acceso a los datos</option>
+                    <option value="/mod/page/view.php?id=1422&amp;forceview=1">2. IPv4 unicast, multicas y broadcast</option>
+                    <option value="/mod/page/view.php?id=1423&amp;forceview=1">3. Tipos de direcciones IPv4</option>
+                    <option value="/mod/page/view.php?id=1424&amp;forceview=1">4. Segmentación de la red</option>
+                    <option value="/mod/page/view.php?id=1426&amp;forceview=1">5. Direccionamiento CIDR</option>
+                    <option value="/mod/page/view.php?id=1440&amp;forceview=1">6. Configuración IP de hosts</option>
+                    <option value="/mod/url/view.php?id=1017&amp;forceview=1">Calculadora IP</option>
+                    <option value="/mod/resource/view.php?id=1560&amp;forceview=1">Cálculo IP</option>
+                    <option value="/mod/page/view.php?id=1435&amp;forceview=1">1. Características de la capa de red</option>
+                    <option value="/mod/page/view.php?id=1438&amp;forceview=1">2. Direcciones y el protocolo ARP</option>
+                    <option value="/mod/page/view.php?id=1439&amp;forceview=1">3. El protocolo ICMPv4</option>
+                    <option value="/mod/page/view.php?id=1043&amp;forceview=1">4. Determinación de la ruta</option>
+                    <option value="/mod/page/view.php?id=1044&amp;forceview=1">5. Reenvio de paquetes</option>
+                    <option value="/mod/page/view.php?id=1045&amp;forceview=1">6. Tablas de routing</option>
+                    <option value="/mod/page/view.php?id=1058&amp;forceview=1">1. Ruteo dinámico</option>
+                    <option value="/mod/page/view.php?id=1059&amp;forceview=1">2. Ruteo por vector distancia</option>
+                    <option value="/mod/page/view.php?id=1060&amp;forceview=1">3. Ruteo por estado enlace</option>
+                    <option value="/mod/page/view.php?id=1063&amp;forceview=1">4. Configuración de OSPF</option>
+                    <option value="/mod/page/view.php?id=1062&amp;forceview=1">5. OSPF multiárea</option>
+                    <option value="/mod/page/view.php?id=1427&amp;forceview=1">1. La capa de enlace de datos</option>
+                    <option value="/mod/page/view.php?id=1459&amp;forceview=1">2. Topologías de red</option>
+                    <option value="/mod/page/view.php?id=1460&amp;forceview=1">3. Tramas en general y Ethernet</option>
+                    <option value="/mod/page/view.php?id=1462&amp;forceview=1">4. Switchers</option>
+                    <option value="/mod/page/view.php?id=1463&amp;forceview=1">5. Conceptos sobre STP</option>
+                    <option value="/mod/page/view.php?id=1464&amp;forceview=1">6. Redes VLAN</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Ir">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="float-right">
+                <a href="https://ips.gnomio.com/mod/page/view.php?id=1422&amp;forceview=1" id="next-activity-link" class="btn btn-link">2. IPv4 unicast, multicas y broadcast ►</a>
+
+        </div>
+</div>
+</div>
+</div>
+                    
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="drawer-62c03ce89db2f62c03ce89612316" class=" drawer bg-white hidden" aria-expanded="false" aria-hidden="true" data-region="right-hand-drawer" role="region" tabindex="0">
+            <div id="message-drawer-62c03ce89db2f62c03ce89612316" class="message-app" data-region="message-drawer" role="region">
+            <div class="closewidget text-right pr-2">
+                <a class="text-dark btn-link" data-action="closedrawer" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" title="Cerrar" aria-label="Cerrar">
+                    <i class="icon fa fa-window-close fa-fw " aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="header-container position-relative" data-region="header-container">
+                <div class="hidden border-bottom p-1 px-sm-2" aria-hidden="true" data-region="view-contacts">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch">
+                            <a class="h-100 d-flex align-items-center mr-2" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" data-route-back="" role="button">
+                                <div class="icon-back-in-drawer">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                                </div>
+                                <div class="icon-back-in-app">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"></i></span>
+                                </div>                            </a>
+                        </div>
+                        <div>
+                            Contactos
+                        </div>
+                        <div class="ml-auto">
+                            <a href="https://ips.gnomio.com/mod/page/view.php?id=1421#" data-route="view-search" role="button" aria-label="Búsqueda">
+                                <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="hidden bg-white position-relative border-bottom p-1 px-sm-2" aria-hidden="true" data-region="view-conversation">
+                    <div class="hidden" data-region="header-content"></div>
+                    <div class="hidden" data-region="header-edit-mode">
+                        
+                        <div class="d-flex p-2 align-items-center">
+                            Mensajes seleccionados:
+                            <span class="ml-1" data-region="message-selected-court">1</span>
+                            <button type="button" class="ml-auto close" aria-label="Cancelar selección de mensaje" data-action="cancel-edit-mode">
+                                    <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div data-region="header-placeholder">
+                        <div class="d-flex">
+                            <div class="ml-2 rounded-circle bg-pulse-grey align-self-center" style="height: 38px; width: 38px">
+                            </div>
+                            <div class="ml-2 " style="flex: 1">
+                                <div class="mt-1 bg-pulse-grey w-75" style="height: 16px;">
+                                </div>
+                            </div>
+                            <div class="ml-2 bg-pulse-grey align-self-center" style="height: 16px; width: 20px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);"></div>
+                </div>                <div class="border-bottom p-1 px-sm-2" aria-hidden="false" data-region="view-overview">
+                    <div class="d-flex align-items-center">
+                        <div class="input-group simplesearchform">
+                            <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Búsqueda" data-region="view-overview-search-input">
+                            <div class="input-group-append">
+                                <span class="icon-no-margin btn btn-submit">
+                                    <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <a href="https://ips.gnomio.com/mod/page/view.php?id=1421#" data-route="view-settings" data-route-param="413" aria-label="Ajustes" role="button">
+                                <i class="icon fa fa-cog fa-fw " aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-right mt-sm-3">
+                        <a href="https://ips.gnomio.com/mod/page/view.php?id=1421#" data-route="view-contacts" role="button">
+                            <i class="icon fa fa-user fa-fw " aria-hidden="true"></i>
+                            Contactos
+                            <span class="badge badge-primary bg-primary ml-2 hidden" data-region="contact-request-count" aria-label="Hay 0 solicitudes de contacto pendientes">
+                                0
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden border-bottom p-1 px-sm-2 view-search" aria-hidden="true" data-region="view-search">
+                    <div class="d-flex align-items-center">
+                        <a class="mr-2 align-self-stretch d-flex align-items-center" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" data-route-back="" data-action="cancel-search" role="button">
+                            <div class="icon-back-in-drawer">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                            </div>
+                            <div class="icon-back-in-app">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"></i></span>
+                            </div>                        </a>
+                        <div class="input-group simplesearchform">
+                            <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Búsqueda" data-region="search-input">
+                            <div class="input-group-append">
+                                <button class="btn btn-submit icon-no-margin" type="button" data-action="search" aria-label="Búsqueda">
+                                    <span data-region="search-icon-container">
+                                        <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                                    </span>
+                                    <span class="hidden" data-region="loading-icon-container">
+                                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="hidden border-bottom p-1 px-sm-2 pb-sm-3" aria-hidden="true" data-region="view-settings">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch">
+                            <a class="h-100 d-flex mr-2 align-items-center" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" data-route-back="" role="button">
+                                <div class="icon-back-in-drawer">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                                </div>
+                                <div class="icon-back-in-app">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"></i></span>
+                                </div>                            </a>
+                        </div>
+                        <div>
+                            Configuración
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container position-relative" data-region="body-container">
+                
+                <div class="hidden" data-region="view-contact" aria-hidden="true">
+                    <div class="p-2 pt-3" data-region="content-container"></div>
+                </div>                <div class="hidden h-100" data-region="view-contacts" aria-hidden="true" data-user-id="413">
+                    <div class="d-flex flex-column h-100">
+                        <div class="p-3 border-bottom">
+                            <ul class="nav nav-pills nav-fill" role="tablist">
+                                <li class="nav-item">
+                                    <a id="contacts-tab-62c03ce89db2f62c03ce89612316" class="nav-link active" href="https://ips.gnomio.com/mod/page/view.php?id=1421#contacts-tab-panel-62c03ce89db2f62c03ce89612316" data-toggle="tab" data-action="show-contacts-section" role="tab" aria-controls="contacts-tab-panel-62c03ce89db2f62c03ce89612316" aria-selected="true">
+                                        Contactos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="requests-tab-62c03ce89db2f62c03ce89612316" class="nav-link" href="https://ips.gnomio.com/mod/page/view.php?id=1421#requests-tab-panel-62c03ce89db2f62c03ce89612316" data-toggle="tab" data-action="show-requests-section" role="tab" aria-controls="requests-tab-panel-62c03ce89db2f62c03ce89612316" aria-selected="false">
+                                        Peticiones
+                                        <span class="badge badge-primary bg-primary ml-2 hidden" data-region="contact-request-count" aria-label="Hay 0 solicitudes de contacto pendientes">
+                                            0
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content d-flex flex-column h-100">
+                                            <div class="tab-pane fade show active h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="413" id="contacts-tab-panel-62c03ce89db2f62c03ce89612316" data-section="contacts" role="tabpanel" aria-labelledby="contacts-tab-62c03ce89db2f62c03ce89612316">
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        No hay contactos
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                    </div>
+                </div>
+                
+                                            <div class="tab-pane fade h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="413" id="requests-tab-panel-62c03ce89db2f62c03ce89612316" data-section="requests" role="tabpanel" aria-labelledby="requests-tab-62c03ce89db2f62c03ce89612316">
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        No hay solicitudes de contacto
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="view-conversation hidden h-100" aria-hidden="true" data-region="view-conversation" data-user-id="413" data-midnight="1656730800" data-message-poll-min="10" data-message-poll-max="120" data-message-poll-after-max="300" style="overflow-y: auto; overflow-x: hidden">
+                    <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+                        <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+                            <div class="py-3 sticky-top z-index-1 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+                                <p class="m-0">Solicitud de contacto enviada</p>
+                                <p class="font-italic font-weight-light" data-region="text"></p>
+                            </div>
+                            <div class="p-3 text-center hidden" data-region="self-conversation-message-container">
+                                <p class="m-0">Espacio personal</p>
+                                <p class="font-italic font-weight-light" data-region="text">Guardar borradores de mensajes, notas, etc, para acceder a ellos más tarde.</p>
+                           </div>
+                            <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</div>
+                        </div>
+                        <div class="p-4 w-100 h-100 hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+                            
+                            <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+                                <p class="text-muted" data-region="dialogue-text"></p>
+                                <div class="mb-2 custom-control custom-checkbox hidden" data-region="delete-messages-for-all-users-toggle-container">
+                                    <input type="checkbox" class="custom-control-input" id="delete-messages-for-all-users" data-region="delete-messages-for-all-users-toggle">
+                                    <label class="custom-control-label text-muted" for="delete-messages-for-all-users">
+                                        Borrar para mí y para todos los demás
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-block">
+                                    <span data-region="dialogue-button-text">Bloque</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-unblock">
+                                    <span data-region="dialogue-button-text">Desbloquear</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact">
+                                    <span data-region="dialogue-button-text">Quitar</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-add-contact">
+                                    <span data-region="dialogue-button-text">Agregar</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages">
+                                    <span data-region="dialogue-button-text">Borrar</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation">
+                                    <span data-region="dialogue-button-text">Borrar</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="request-add-contact">
+                                    <span data-region="dialogue-button-text">Enviar solicitud de contacto</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="accept-contact-request">
+                                    <span data-region="dialogue-button-text">Aceptar y añadir a los contactos</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-block hidden" data-action="decline-contact-request">
+                                    <span data-region="dialogue-button-text">Rechazar</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block" data-action="okay-confirm">OK</button>
+                                <button type="button" class="btn btn-secondary btn-block" data-action="cancel-confirm">Cancelar</button>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+                            <div class="h-100 d-flex flex-column">
+                                <div class="px-2 pb-2 pt-0 bg-light h-100" style="overflow-y: auto">
+                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                </div>
+                            </div>                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden" aria-hidden="true" data-region="view-group-info">
+                    <div class="pt-3 h-100 d-flex flex-column" data-region="group-info-content-container" style="overflow-y: auto"></div>
+                </div>                <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview" data-user-id="413">
+                    <div id="message-drawer-view-overview-container-62c03ce89db2f62c03ce89612316" class="d-flex flex-column h-100" style="overflow-y: auto">
+                            
+                            
+                            <div class="section border-0 card" data-region="view-overview-favourites">
+                                <div id="view-overview-favourites-toggle" class="card-header" data-region="toggle">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-favourites-target-62c03ce89db2f62c03ce89612316" aria-expanded="false" aria-controls="view-overview-favourites-target-62c03ce89db2f62c03ce89612316">
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Destacados</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container" aria-label=" conversaciones en total">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="413" id="view-overview-favourites-target-62c03ce89db2f62c03ce89612316" aria-labelledby="view-overview-favourites-toggle" data-parent="#message-drawer-view-overview-container-62c03ce89db2f62c03ce89612316">
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Sin conversaciones destacadas</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="section border-0 card" data-region="view-overview-group-messages">
+                                <div id="view-overview-group-messages-toggle" class="card-header" data-region="toggle">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-group-messages-target-62c03ce89db2f62c03ce89612316" aria-expanded="false" aria-controls="view-overview-group-messages-target-62c03ce89db2f62c03ce89612316">
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Grupo</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container" aria-label=" conversaciones en total">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="413" id="view-overview-group-messages-target-62c03ce89db2f62c03ce89612316" aria-labelledby="view-overview-group-messages-toggle" data-parent="#message-drawer-view-overview-container-62c03ce89db2f62c03ce89612316">
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">No hay conversaciónes de grupo</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="section border-0 card" data-region="view-overview-messages">
+                                <div id="view-overview-messages-toggle" class="card-header" data-region="toggle">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-messages-target-62c03ce89db2f62c03ce89612316" aria-expanded="false" aria-controls="view-overview-messages-target-62c03ce89db2f62c03ce89612316">
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Privado</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container" aria-label=" conversaciones en total">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="413" id="view-overview-messages-target-62c03ce89db2f62c03ce89612316" aria-labelledby="view-overview-messages-toggle" data-parent="#message-drawer-view-overview-container-62c03ce89db2f62c03ce89612316">
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">No hay conversaciones privadas</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                
+                <div data-region="view-search" aria-hidden="true" class="h-100 hidden" data-user-id="413" data-users-offset="0" data-messages-offset="0" style="overflow-y: auto">
+                    <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+                        
+                        <div class="d-flex flex-column">
+                            <div class="mb-3 bg-white" data-region="all-contacts-container">
+                                <div data-region="contacts-container" class="pt-2">
+                                    <h4 class="h6 px-2">Contactos</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div data-region="non-contacts-container" class="pt-2 border-top">
+                                    <h4 class="h6 px-2">No contactos</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-users">
+                                        <span data-region="button-text">Cargar más</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white" data-region="messages-container">
+                                <h4 class="h6 px-2 pt-2">Mensajes</h4>
+                                <div class="list-group" data-region="list"></div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-messages">
+                                        <span data-region="button-text">Cargar más</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="hidden p-3 text-center" data-region="no-results-container">No hay resultados</p>
+                        </div>                    </div>
+                    <div class="hidden" data-region="loading-placeholder">
+                        <div class="text-center pt-3 icon-size-4"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</div>
+                    </div>
+                    <div class="p-3 text-center" data-region="empty-message-container">
+                        <p>Buscar personas y mensajes</p>
+                    </div>
+                </div>                
+                <div class="h-100 hidden bg-white" aria-hidden="true" data-region="view-settings">
+                    <div class="hidden" data-region="content-container">
+                        
+                        <div data-region="settings" class="p-3">
+                            <h3 class="h6 font-weight-bold">Privacidad</h3>
+                            <p>Puedes restringir quién puede enviarte mensajes</p>
+                            <div data-preference="blocknoncontacts" class="mb-3">
+                                <fieldset>
+                                    <legend class="sr-only">Aceptar mensajes desde:</legend>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-62c03ce89db2f62c03ce89612316-1" value="1">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-62c03ce89db2f62c03ce89612316-1">
+                                                Únicamente mis contactos
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-62c03ce89db2f62c03ce89612316-0" value="0">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-62c03ce89db2f62c03ce89612316-0">
+                                                Mis contactos y cualquier persona de mis cursos
+                                            </label>
+                                        </div>
+                                </fieldset>
+                            </div>
+                        
+                            <div class="hidden" data-region="notification-preference-container">
+                                <h3 class="mb-2 mt-4 h6 font-weight-bold">Preferencias de notificación</h3>
+                            </div>
+                        
+                            <h3 class="mb-2 mt-4 h6 font-weight-bold">General</h3>
+                            <div data-preference="entertosend">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-62c03ce89db2f62c03ce89612316">
+                                    <label class="custom-control-label" for="enter-to-send-62c03ce89db2f62c03ce89612316">
+                                        Usar "intro" para enviar
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-region="placeholder-container">
+                        
+                        <div class="d-flex flex-column p-3">
+                            <div class="w-25 bg-pulse-grey h6" style="height: 18px"></div>
+                            <div class="w-75 bg-pulse-grey mb-4" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-4">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                        </div>                    </div>
+                </div>            </div>
+            <div class="footer-container position-relative" data-region="footer-container">
+                
+                <div class="hidden border-top bg-white position-relative" aria-hidden="true" data-region="view-conversation" data-enter-to-send="0">
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-container">
+                        
+                            <div class="emoji-auto-complete-container w-100 hidden" data-region="emoji-auto-complete-container" aria-live="polite" aria-hidden="true">
+                            </div>
+                        <div class="d-flex mt-sm-1">
+                            <textarea dir="auto" data-region="send-message-txt" class="form-control bg-light" rows="3" data-auto-rows="" data-min-rows="3" data-max-rows="5" aria-label="Escribe un mensaje..." placeholder="Escribe un mensaje..." style="resize: none" maxlength="4096"></textarea>
+                        
+                            <div class="position-relative d-flex flex-column">
+                                    <div data-region="emoji-picker-container" class="emoji-picker-container hidden" aria-hidden="true">
+                                        
+                                        <div data-region="emoji-picker" class="card shadow emoji-picker">
+                                            <div class="card-header px-1 pt-1 pb-0 d-flex justify-content-between flex-shrink-0">
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button selected" data-action="show-category" data-category="Recent" title="Reciente">
+                                                    <i class="icon fa fa-clock-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Smileys &amp; Emotion" title="Caritas sonrientes y emociones">
+                                                    <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="People &amp; Body" title="Personas y cuerpo">
+                                                    <i class="icon fa fa-male fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Animals &amp; Nature" title="Animales y naturaleza">
+                                                    <i class="icon fa fa-leaf fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Food &amp; Drink" title="Comida y bebida">
+                                                    <i class="icon fa fa-cutlery fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Travel &amp; Places" title="Viaje y lugares">
+                                                    <i class="icon fa fa-plane fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Activities" title="Actividades">
+                                                    <i class="icon fa fa-futbol-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Objects" title="Objetos">
+                                                    <i class="icon fa fa-lightbulb-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Symbols" title="Símbolos">
+                                                    <i class="icon fa fa-heart fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Flags" title="Banderas">
+                                                    <i class="icon fa fa-flag fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                            <div class="card-body p-2 d-flex flex-column overflow-hidden">
+                                                <div class="input-group mb-1 flex-shrink-0">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text pr-0 bg-white text-muted">
+                                                            <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control border-left-0" placeholder="Buscar" aria-label="Buscar" data-region="search-input">
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto emojis-container h-100" data-region="emojis-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto search-results-container h-100 hidden" data-region="search-results-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-flex flex-shrink-0" data-region="footer">
+                                                <div class="emoji-preview" data-region="emoji-preview"></div>
+                                                <div data-region="emoji-short-name" class="emoji-short-name text-muted text-wrap ml-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-link btn-icon icon-size-3 ml-1" aria-label="Selector de emoticono" data-action="toggle-emoji-picker">
+                                        <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"></i>
+                                    </button>
+                                <button class="btn btn-link btn-icon icon-size-3 ml-1 mt-auto" aria-label="Enviar mensaje" data-action="send-message">
+                                    <span data-region="send-icon-container"><i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"></i></span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-edit-mode-container">
+                        
+                        <div class="d-flex p-3 justify-content-end">
+                            <button class="btn btn-link btn-icon my-1 icon-size-4" data-action="delete-selected-messages" data-toggle="tooltip" data-placement="top" title="Eliminar mensajes seleccionados">
+                                <span data-region="icon-container"><i class="icon fa fa-trash fa-fw " aria-hidden="true"></i></span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                                <span class="sr-only">Eliminar mensajes seleccionados</span>
+                            </button>
+                        </div>                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-contact-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p data-region="title"></p>
+                            <p class="text-muted" data-region="text"></p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-add-contact">
+                                <span data-region="dialogue-button-text">Enviar solicitud de contacto</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-unblock-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">Ha bloqueado a este usuario.</p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-unblock">
+                                <span data-region="dialogue-button-text">Desbloquear usuario</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Cargando" role="img" aria-label="Cargando"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-unable-to-message">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">No puedes enviar mensajes a este usuario</p>
+                        </div>
+                    </div>
+                    <div class="p-sm-2" data-region="placeholder-container">
+                        <div class="d-flex">
+                            <div class="bg-pulse-grey w-100" style="height: 80px"></div>
+                            <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px"></div>
+                        </div>                    </div>
+                    <div class="hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);"></div>
+                </div>                    <div data-region="view-overview" class="text-center">
+                        <a href="https://ips.gnomio.com/message/index.php">
+                            Ver todo
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+</div>
+    <div id="goto-top-link">
+        <a class="btn btn-light" role="button" href="https://ips.gnomio.com/mod/page/view.php?id=1421#" aria-label="Ir arriba">
+            <i class="icon fa fa-arrow-up fa-fw " aria-hidden="true"></i>
+        </a>
+    </div>
+    <footer id="page-footer" class="py-3 bg-dark text-light">
+        <div class="container">
+            <div id="course-footer"></div>
+    
+    
+            <div class="logininfo">Usted se ha identificado como <a href="https://ips.gnomio.com/user/profile.php?id=413" title="Ver perfil">Agustin Jaffre</a> (<a href="https://ips.gnomio.com/login/logout.php?sesskey=Bc7eCkOJO3">Cerrar sesión</a>)</div>
+            <div class="tool_usertours-resettourcontainer"></div>
+            <div class="homelink"><a href="https://ips.gnomio.com/course/view.php?id=23">ARL_5I22</a></div>
+            <nav class="nav navbar-nav d-md-none" aria-label="Menú personalizado">
+                    <ul class="list-unstyled pt-3">
+                                        <li><a href="https://ips.gnomio.com/mod/page/view.php?id=1421#" title="Idioma">Español - Internacional ‎(es)‎</a></li>
+                                    <li>
+                                        <ul class="list-unstyled ml-3">
+                                                            <li><a href="https://ips.gnomio.com/mod/page/view.php?id=1421&amp;lang=en" title="English ‎(en)‎">English ‎(en)‎</a></li>
+                                                            <li><a href="https://ips.gnomio.com/mod/page/view.php?id=1421&amp;lang=es" title="Español - Internacional ‎(es)‎">Español - Internacional ‎(es)‎</a></li>
+                                        </ul>
+                                    </li>
+                    </ul>
+            </nav>
+            
+            <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://ips.gnomio.com/lib/requirejs.php/1651966029/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://ips.gnomio.com/lib/javascript.php/1651966029/lib/jquery/jquery-3.5.1.min',
+        jqueryui: 'https://ips.gnomio.com/lib/javascript.php/1651966029/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://ips.gnomio.com/lib/javascript.php/1651966029/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="./Redes 2.1. Estructura de la dirección IPv4_files/javascript(4).php"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('tool_usertours/usertours'); require(['tool_usertours/usertours'], function(amd) {amd.init([{"tourId":"6","startTour":false,"filtervalues":{"cssselector":{"0":"[data-region=activity-information]"}}}], ["cssselector"]); M.util.js_complete('tool_usertours/usertours');});;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select62c03ce8961233', [CustomEvents.events.accessibleChange]);
+    $('#single_select62c03ce8961233').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f62c03ce8961232').submit();
+        }
+    });
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-62c03ce8995cf62c03ce8961236');
+    Popover.init(toggle);
+});
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f62c03ce89612315').submit();
+            });
+        });
+    ;
+
+require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+    var root = $('#message-drawer-62c03ce89db2f62c03ce89612316');
+    MessageDrawer.init(root, '62c03ce89db2f62c03ce89612316', false);
+});
+;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select62c03ce89612318', [CustomEvents.events.accessibleChange]);
+    $('#single_select62c03ce89612318').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f62c03ce89612317').submit();
+        }
+    });
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+
+M.util.js_pending('theme_boost/drawer');
+require(['theme_boost/drawer'], function(drawer) {
+    drawer.init();
+    M.util.js_complete('theme_boost/drawer');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(6720, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random62c03ce89612319'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random62c03ce89612319'); });
+})();
+//]]>
+</script>
+
+        </div>
+    </footer>
+</div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_1_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Redes 2.1. Estructura de la dirección IPv4_files/ads(1).html" data-google-container-id="a!2" data-load-complete="true"></iframe></ins></ins></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: block; width: 100% !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; bottom: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,26 L0,6 A6,6 0 0,1 6,1 L50,1 A6,6 0 0,1 56,6 L56,20 A6,6 0 0,0 62,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);"></path><rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="down" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="12" x2="28" y2="18"></line><line x1="28" y1="18" x2="34" y2="12"></line></g></svg></span></ins><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_2_anchor" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_2" name="aswift_2" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Redes 2.1. Estructura de la dirección IPv4_files/zrt_lookup.html" data-google-container-id="a!3" data-google-query-id="COb2uIud2vgCFUczuQYdDmwGAg" data-load-complete="true"></iframe></ins></ins></ins><iframe src="./Redes 2.1. Estructura de la dirección IPv4_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./Redes 2.1. Estructura de la dirección IPv4_files/zrt_lookup(1).html" style="display: none;"></iframe></html>
